@@ -1000,6 +1000,10 @@ class AssignmentsController < ApplicationController
       assignment.group_max = 1
     end
 
+    if params[:is_scanned] == 'true'
+      assignment.scanned_exam = true
+    end
+
     assignment
   end
 
