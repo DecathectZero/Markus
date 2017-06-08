@@ -1000,10 +1000,6 @@ class AssignmentsController < ApplicationController
       assignment.group_max = 1
     end
 
-    if params[:is_scanned] == 'true'
-      assignment.scanned_exam = true
-    end
-
     assignment
   end
 
@@ -1070,6 +1066,7 @@ class AssignmentsController < ApplicationController
         :invalid_override,
         :section_groups_only,
         :only_required_files,
+        :scanned_exam,
         section_due_dates_attributes: [:_destroy,
                                        :id,
                                        :section_id,

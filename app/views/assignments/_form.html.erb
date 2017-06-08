@@ -17,7 +17,7 @@
 
 <%= form_for @assignment do |f| %>
 
-  <input type="hidden" name="is_scanned" value="<%= @is_scanned %>">
+  <input type="hidden" name="assignment[scanned_exam]" value="<%= @is_scanned %>">
 
   <label class='required'><%= t('assignment.required_fields') %></label>
 
