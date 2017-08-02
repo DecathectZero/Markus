@@ -89,7 +89,7 @@ class SplitPDFJob < ActiveJob::Base
             m_logger.log(status)
             num_pages_qr_scan_error += 1
           end
-          split_page.update_attributes(status: status, group: group, exam_page_number: m[:exam_num].to_i)
+          split_page.update_attributes(status: status, group: group, exam_page_number: m[:page_num].to_i)
         end
         progress.increment
       end
